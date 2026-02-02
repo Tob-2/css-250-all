@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Task Board</title>
+
+</head>
+
+<body style="background-color: #0b132b;">
+
+  <div class="d-flex justify-content-between">
+    <div style="margin-top: 1rem; padding-left: 10rem;">
+      <div
+        class=" badge bg-secondary bg-opacity-25 text-secondary fs-5 fw-semibold border border-secondary rounded-pill ">
+        Bootstrap To-Do
+      </div>
+
+      <div style="color: white;">
+        <h1>Your Tasks, beautifully organized</h1>
+      </div>
+
+      <div style="color: grey;">
+        <h5>Add tasks, search, filter, and keep everything saved automatically.</h5>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------ -->
+    <div style="margin-right: 30rem; margin-top: 5rem;">
+      <select class=" badge bg-secondary bg-opacity-25 text-white fs-5 fw-normal border border-secondary rounded-pill "
+        id="option" class="option" style="max-width:120px">
+        <option>Option</option>
+      </select>
+    </div>
+
+  </div>
+
+  <!-- -------------top left----------------------------------------------------------------------------------------- -->
+  <div class="d-flex justify-content-center">
+    <div class="container py-5 px-5 mt-5 badge bg-secondary bg-opacity-25 border border-secondary rounded-4"
+      style="max-width: 50vw ">
+
+  
+      <div>
+        <form id="taskForm" class="d-flex gap-2 mb-3">
+          <input type="text" id="taskInput" class="form-control" placeholder="Add new task" required>
+          <select id="priorityInput" class="form-select" style="max-width:120px">
+            <option>Priority</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+          <button class="btn btn-primary">Add</button>
+        </form>
+
+        
+        <input type="text" id="searchInput" class="form-control mb-3 " placeholder="Search task...">
+
+      
+        <div class="btn-group mb-3">
+          <button class="btn btn-outline-secondary filter-btn" data-filter="all">All</button>
+          <button class="btn btn-outline-secondary filter-btn" data-filter="active">Active</button>
+          <button class="btn btn-outline-secondary filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+      
+        <div class="mb-2 text-muted" id="counter"></div>
+
+   
+        <ul id="taskList" class="list-group mb-3"></ul>
+
+  
+        <button id="clearCompleted" class="btn btn-danger w-100">
+          Clear Completed
+        </button>
+
+      </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
