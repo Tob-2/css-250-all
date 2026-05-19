@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  /* เปลี่ยน font-sans เริ่มต้นของ Tailwind ให้เป็น Black Ops One */
+  --font-sans: "Orbitron", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  /* บังคับให้ข้อความทั้งเว็บใช้ Black Ops One เป็นค่าเริ่มต้น */
+  font-family: "Orbitron", sans-serif;
+}
